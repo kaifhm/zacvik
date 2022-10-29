@@ -70,10 +70,11 @@ nav ul li::before {
     transition: scale 300ms ease;
 }
 
-nav ul li:hover::before {
-    scale: 1 1;
+@media (hover: hover) {
+    nav ul li:hover::before {
+        scale: 1 1;
+    }
 }
-
 nav a {
     text-decoration: none;
 }
@@ -265,6 +266,12 @@ header .scroll::before {
     margin-right: auto;
     padding-left: 3rem;
     flex: 1 1 33%;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.footer h3 {
+    margin-bottom: 0.3rem;
 }
 
 .footer > div + div {
@@ -273,23 +280,22 @@ header .scroll::before {
 
 
 .footer .links a {
+    display: block;
     text-decoration: none;
     list-style-type: none;
-    margin: 0.3rem;
     color: grey;
+    padding: 0.2rem 0;
 }
 
 .contact p {
-    margin-top: 0.8rem;
     color: gray;
     line-height: 1.5;
-    
 }
 
 .social__media__links ul {
-    padding-top: 0.5rem;
     list-style-type: none;
     display: flex;
+    justify-content: center;
 }
 
 .social__media__links ul li {
@@ -309,7 +315,7 @@ header .scroll::before {
     text-align: center;
 }
 
-.credits a{
+.credits a {
     color: #aaa;
     font-size: 0.8rem;
     padding: 0.8rem;
@@ -319,7 +325,14 @@ header .scroll::before {
 
     header nav {
         padding: 0 1.2rem;
-        /* margin-right: 1.2rem; */
+    }
+
+    nav ul li {
+        margin: 0 0.3rem;
+    }
+
+    .about {
+        padding: 2rem;
     }
 
     .tag {
@@ -332,5 +345,32 @@ header .scroll::before {
 
     .flex__container > * {
         max-width: 100%;
+    }
+
+    .activites__body {
+        height: auto;
+        max-height: none;
+    }
+
+    .activities {
+        padding: 0.8rem;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer > div {
+        margin: auto;
+        margin-bottom: 1rem;
+        padding-left: 0;
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .footer > div + div {
+        border-left: none;
+        padding-top: 1rem;
+        border-top: 1px solid lightgray;
     }
 }
