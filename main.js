@@ -1,10 +1,8 @@
 const scrollBtn = document.getElementById('scroll')
 
 scrollBtn.addEventListener('click', (e) => {
-    console.log('clicked');
-    const parent = e.target.parentElement
-    const height = parent.scrollHeight
-    window.scrollBy(0, height)
+    const aboutEl = document.getElementById('about')
+    aboutEl.scrollIntoView()
 })
 
 const slides = document.querySelectorAll('.slide');
