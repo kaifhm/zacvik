@@ -12,7 +12,11 @@
 <body>
     <header>
         <div class="header">
-            <div class="container grid">
+            <div class="hero__image">
+                <img src="./imgs/hero_bg.jpg" alt="">
+            </div>
+            <div class="header__backdrop"></div>
+            <div class="container">
                 <nav>
                     <div class="logo"><img src="./imgs/zacvik.svg" alt="Zacvik Logo"></div>
                     <ul>
@@ -35,8 +39,8 @@
     <main>
         <div class="about" id="about">
             <div class="container">
-                <h2>THE ZACVIK COMPANY</h2>
-                <p>ZACVIK INDIA LLP is a limited liability partnership business entity registered under The LLP Act, 2008.We are specialists that cover all export and import operations and procedures.We buy products in one country and sold them in other country. Also we provide high level advertisement.It is a reliable and trusted 10 years old import export data provider and Market Research Company.It’s registered for pre-defined objects or activity Retail trade except of motor vehicles and motorcycles repair of personal&household goods as per Activity Code mentioned under Company CIN Number AAT-2746.</p>
+                <h2>THE <span>ZACVIK</span> COMPANY</h2>
+                <p>ZACVIK INDIA LLP is a limited liability partnership business entity registered under The LLP Act, 2008. We are specialists that cover all export and import operations and procedures. We buy products in one country and sold them in other country. Also we provide high level advertisement. It is a reliable and trusted 10 years old import export data provider and Market Research Company. It’s registered for pre-defined objects or activity Retail trade except of motor vehicles and motorcycles repair of personal & household goods as per Activity Code mentioned under Company CIN Number AAT-2746.</p>
             </div>
 
         </div>
@@ -66,7 +70,7 @@
             </div>
         </div>
         <div class="activities">
-            <div class="container flex__container">
+            <div class="container">
                 <div class="ventures">
                     <div class="activites__head">
                         <h3>Ventures</h3>
@@ -86,25 +90,42 @@
                             <li>
                                 <h3>First Mahi Group Ltd</h3>
                                 <span>Partner | April 2020 - Present</span>
-                                <p>We deal exclusively in marketing to consumers htrough digital channels. Also, we provide create your brand and manage it. As a digital branding agency, we follow an approach that involves research, strategy , and advertising to build unique brand identities</p>
+                                <p>We deal exclusively in marketing to consumers htrough digital channels. Also, we provide create your brand and manage it. As a digital branding agency, we follow an approach that involves research, strategy, and advertising to build unique brand identities</p>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="profile">
-                    <div class="activites__head">
-                        <h3>Twitter</h3>
-                    </div>
-                    <div class="activities__body social__profile">
-                        <a class="twitter-timeline" href="https://twitter.com/iammubarak__?ref_src=twsrc%5Etfw">Tweets by iammubarak__</a>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    </div>
-                </div>
             </div>
         </div>
+        <div class="contact__section">
+            <form class="container contact__card">
+                <h2>Contact us</h2>
+                <div class="info__section" data-name="firstname">
+                    <label for="firstname">First Name</label>
+                    <input type="text" name="firstname" id="firstname">
+                </div>
+                <div class="info__section" data-name="lastname">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" name="lastname" id="lastname">
+                </div>
+                <div class="info__section" data-name="email">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email">
+                </div>
+                <div class="info__section" data-name="subject">
+                    <label for="subject">Subject</label>
+                    <input type="text" name="subject" id="subject">
+                </div>
+                <div class="info__section" data-name="message">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="10"></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
     </main>
-    <footer class="container">
-        <div class="footer">
+    <footer>
+        <div class="footer container">
             <div class="links">
                 <h3>Quick links</h3>
                 <a href="#">
@@ -117,9 +138,9 @@
                     <li>Contact Us</li>
                 </a>
             </div>
-            <div class="contact" id="contact">
+            <div>
                 <h3>Contact Us</h3>
-                <p>4-48/32(1)<br>Alape Village<br>Mangaluru - 575007<br>Karnataka India.</p>
+                <p>4-48/32(1)<br>Alape Village<br>Mangaluru - 575007<br>Karnataka, India</p>
             </div>
             <div class="social__media__links">
                 <h3>Connect with us</h3>
