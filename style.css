@@ -69,6 +69,10 @@ h1 {
     text-align: center;
 }
 
+h1 span {
+    color: #ff2a2a;
+}
+
 nav {
     display: flex;
     margin: 1.2rem 0;
@@ -107,7 +111,7 @@ label[for="menu-toggle"] {
     scale: 0 1;
     height: 3px;
     bottom: -10px;
-    background-color: white;
+    background-color: #ff2a2a;
     transition: scale 300ms ease;
 }
 
@@ -613,7 +617,7 @@ footer {
         margin: 0;
         color: white;
         width: auto;
-        height: 400px;
+        height: 300px;
     }
 
     .contact__card {
