@@ -284,12 +284,61 @@ header .scroll::before {
 }
 
 .contact__section {
-    padding: 3rem 0;
-    /* background-color: #2d2d2d; */
+    padding: 6rem 0;
+}
+
+.contact__container {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    right: 5%;
+}
+
+.contact__info {
+    display: grid;
+    position: relative;
+    left: 17%;
+    grid-template-rows: 1.5rem 1fr 2.5rem;
+    padding: 2rem;
+    padding-right: 6rem;
+    margin: 1rem 0;
+    background-color: #ff2a2a;
+    color: white;
+    width: max-content;
+    height: auto;
+}
+
+.contact__info img,
+.contact__info .social__media__links img {
+    filter: contrast(1);
+}
+
+.contacts {
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.info__section {
+    display: flex;
+    padding: 1rem;
+    padding-left: 0;
 }
 
 
+.info__section img {
+    height: 1rem;
+    width: 1rem;
+    margin-top: 2px;
+    margin-right: 0.5rem;
+}
+
+.contact__info .social__media__links ul {
+    justify-content: start;
+}
+
 .contact__card {
+    box-sizing: border-box;
     display: grid;
     grid-template-areas: "header header"
                          "firstname lastname"
@@ -301,48 +350,55 @@ header .scroll::before {
     box-sizing: border-box;
     max-width: 900px;
     margin: auto;
-    gap: 0.8rem;
-    padding: 2rem;
-    padding-right: 4rem;
+    gap: 1rem;
+    padding: 3rem 0;
+    padding-left: 14rem;
+    padding-right: 2rem;
+    outline: 1px solid #1e1e1e;
 }
 
-.info__section label {
+.contact__card h2 {
+    grid-area: header;
+}
+
+.field__section label {
     display: block;
     margin-bottom: 5px;
     font-size: 0.9rem;
 }
 
-.info__section input, .info__section textarea {
+.field__section input, .field__section textarea {
     width: 100%;
     padding: 0.8rem;
     border-radius: none;
     border: 1px solid grey;
     resize: vertical;
+    box-sizing: border-box;
 }
 
-.info__section input:focus,
-.info__section textarea:focus {
+.field__section input:focus,
+.field__section textarea:focus {
     outline: 1px solid #ff2a2a;
 }
 
-.info__section[data-name="firstname"] {
+.field__section[data-name="firstname"] {
     grid-area: firstname;
     margin-right: 1.5rem;
 }
 
-.info__section[data-name="lastname"] {
+.field__section[data-name="lastname"] {
     grid-area: lastname;
 }
 
-.info__section[data-name="email"] {
+.field__section[data-name="email"] {
     grid-area: email;
 }
 
-.info__section[data-name="subject"] {
+.field__section[data-name="subject"] {
     grid-area: subject;
 }
 
-.info__section[data-name="message"] {
+.field__section[data-name="message"] {
     grid-area: message;
 }
 
@@ -463,6 +519,46 @@ footer {
 
     .activities {
         padding: 0.8rem;
+    }
+
+    .contact__section {
+        padding: 0;
+    }
+    
+    .contact__container {
+        position: relative;
+        display: initial;
+        width: fit-content;
+        right: auto;
+    }
+    
+    .contact__info {
+        display: grid;
+        position: static;
+        left: auto;
+        grid-template-rows: 1.5rem 1fr 2.5rem;
+        padding: 1.5rem;
+        margin: 0;
+        color: white;
+        width: auto;
+        height: 400px;
+    }
+
+    .contact__card {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-areas: "header header"
+                            "firstname lastname"
+                            "email email"
+                            "subject subject"
+                            "message message"
+                            "message message"
+                            "send empty";
+        box-sizing: border-box;
+        max-width: none;
+        gap: 1rem;
+        padding: 1rem;
+        outline: none;
     }
 
     .footer {
