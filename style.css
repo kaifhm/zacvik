@@ -74,14 +74,23 @@ nav {
     margin: 1.2rem 0;
 }
 
-nav ul {
+#menu-toggle {
+    display: none;
+}
+
+label[for="menu-toggle"] {
+    display: none;
+}
+
+.navigation {
     display: flex;
     margin-left: auto;
     flex: 1 1 30%;
     justify-content: flex-end;
+    height: max-content;
 }
 
-nav ul li {
+.navigation li {
     position: relative;
     margin: 0 1rem;
     color: white;
@@ -91,7 +100,7 @@ nav ul li {
     user-select: none;
 }
 
-nav ul li::before {
+.navigation li::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -103,7 +112,7 @@ nav ul li::before {
 }
 
 @media (hover: hover) {
-    nav ul li:hover::before {
+    .navigation li:hover::before {
         scale: 1 1;
     }
 }
@@ -383,7 +392,6 @@ header .scroll::before {
 
 .field__section[data-name="firstname"] {
     grid-area: firstname;
-    margin-right: 1.5rem;
 }
 
 .field__section[data-name="lastname"] {
@@ -498,10 +506,74 @@ footer {
 
     header nav {
         padding: 0 1.2rem;
+        flex-direction: column;
+        position: relative;
     }
 
-    nav ul li {
-        margin: 0 0.3rem;
+    label[for="menu-toggle"] {
+        --bg-color: #fffc;
+        display: inline-block;
+        position: absolute;
+        top: 0.6rem;
+        width: .9rem;
+        height: 3px;
+        background-color: var(--bg-color);
+        right: calc(0% + 1.2rem);
+        z-index: 1;
+        isolation: isolate;
+    }
+
+    label[for="menu-toggle"]::before,
+    label[for="menu-toggle"]::after {
+        content: '';
+        position: absolute;
+        background-color: var(--bg-color);
+        height: 100%;
+        right: 0;
+    }
+    
+    label[for="menu-toggle"]::before {
+        width: 150%;
+        bottom: 0.5rem;
+    }
+
+    label[for="menu-toggle"]::after {
+        width: 50%;
+        top: 0.5rem;
+    }
+
+    .navigation {
+        position: absolute;
+        top: -1.2rem;
+        left: 0;
+        flex-direction: column;
+        justify-content: start;
+        height: min-content;
+        align-items: center;
+        margin: 0;
+        background-color: #111e;
+        width: 100%;
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 300ms ease-in;
+        transition-delay: 200ms;
+    }
+
+    .navigation li {
+        margin: 1.5rem 0.3rem;
+        opacity: 0;
+        transition: opacity 300ms ease-in;
+        transition-delay: 300ms;
+    }
+
+    #menu-toggle:checked + .navigation {
+        transform: scale(1, 1);
+    }
+
+    #menu-toggle:checked + .navigation li {
+        opacity: 1;
+        transition: opacity 30ms linear;
+        transition-delay: 300ms;
     }
 
     .about {
